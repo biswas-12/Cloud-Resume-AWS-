@@ -1,111 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Biswanath Sah - Resume</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap');
-
-    body {
-      font-family: 'Times New Roman', serif;
-      line-height: 1.6;
-      background: #ffffff;
-      color: #000000;
-      margin: 0;
-      padding: 2rem;
-    }
-
-    h1, h2, h3 {
-      margin-bottom: 0.5rem;
-    }
-
-    h1 {
-      font-size: 2rem;
-    }
-
-    h2 {
-      font-size: 1.4rem;
-      border-bottom: 1px solid #000;
-      margin-top: 1.5rem;
-    }
-
-    ul {
-      padding-left: 1.2rem;
-    }
-
-    li {
-      margin-bottom: 0.5rem;
-    }
-
-    a {
-      color: #0000ee;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .section {
-      margin-bottom: 1.5rem;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Biswanath Sah</h1>
-  <p>
-    ☎ 8917669825 | 
-    <a href="mailto:sah.biswanath2003@gmail.com">sah.biswanath2003@gmail.com</a> |
-    <a href="https://www.linkedin.com/in/biswanath-sah-918445243">LinkedIn</a> |
-    <a href="https://github.com/biswas-12">GitHub</a>
-  </p>
+  <div class="resume">
+    <header>
+      <h1>Biswanath Sah</h1>
+      <p>📞 8917669825 | 📧 sah.biswanath2003@gmail.com</p>
+      <p>
+        <a href="https://www.linkedin.com/in/biswanath-sah-918445243/">LinkedIn</a> |
+        <a href="https://github.com/biswas-12">GitHub</a>
+      </p>
+    </header>
 
-  <div class="section">
-    <h2>Education</h2>
-    <ul>
-      <li><strong>NIST Institute of Science and Technology</strong> – B.Tech CSE (2021 – Present) | CGPA: 8.6</li>
-      <li><strong>Kendriya Vidyalaya</strong> – Higher Secondary (2018 – 2020) | 72.6%</li>
-      <li><strong>Kendriya Vidyalaya</strong> – Matriculation (2018) | 82.3%</li>
-    </ul>
-  </div>
+    <section>
+      <h2>Education</h2>
+      <ul>
+        <li><strong>NIST Institute of Science and Technology</strong> – BTech CSE (2021–present) | CGPA: 8.6</li>
+        <li><strong>Kendriya Vidyalaya</strong> – Higher Secondary (2018–2020) | 72.6%</li>
+        <li><strong>Kendriya Vidyalaya</strong> – Matriculation (2018) | 82.3%</li>
+      </ul>
+    </section>
 
-  <div class="section">
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>TO-DO App Deployment using CI/CD Pipeline</strong><br>
-        Automated deployment using Jenkins, Docker, and GitHub. Hosted on AWS EC2, optimized with DockerHub and Groovy pipelines.
-      </li>
-      <li><strong>Multi Environment AWS Infrastructure using Terraform</strong><br>
-        Provisioned DEV/STG/PRD infra using modular Terraform configs. Managed EC2, S3, and DynamoDB across environments.
-      </li>
-    </ul>
-  </div>
+    <section>
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>TO-DO App Deployment using CI/CD Pipeline</h3>
+        <p><strong>Tech:</strong> AWS, Docker, Jenkins, GitHub Webhooks</p>
+        <ul>
+          <li>Automated CI/CD pipeline using Jenkins & Docker.</li>
+          <li>Deployed containerized app on AWS EC2 with GitHub integration.</li>
+          <li>Used DockerHub as artifact repo; remote deployments with Groovy scripts.</li>
+        </ul>
+      </div>
 
-  <div class="section">
-    <h2>Skills & Technologies</h2>
-    <p><strong>Languages:</strong> Python, HTML, CSS, SQL</p>
-    <p><strong>Tools:</strong> GitHub, Jenkins, Docker, Kubernetes, Terraform, Postman, Linux, Google Cloud, AWS</p>
-  </div>
+      <div class="project">
+        <h3>Multi Environment AWS Infrastructure using Terraform</h3>
+        <p><strong>Tech:</strong> AWS S3, DynamoDB, EC2, Terraform</p>
+        <ul>
+          <li>Provisioned DEV, STG, PRD infra using Terraform (modular setup).</li>
+          <li>Reduced setup time by 85–90%; ensured consistent deployments.</li>
+        </ul>
+      </div>
+    </section>
 
-  <div class="section">
-    <h2>Certifications</h2>
-    <ul>
-      <li>GCP DevOps Project – KodeKloud (Feb 2025)</li>
-      <li>Docker Training – KodeKloud (Sep 2024)</li>
-      <li>GitHub Foundation Certified (Jul 2024)</li>
-      <li>Microsoft AI Fundamentals (Jun 2024)</li>
-      <li>Postman API Student Expert (Dec 2023)</li>
-      <li>Python for Data Science – IIT Madras (Aug 2023)</li>
-    </ul>
-  </div>
+    <section>
+      <h2>Skills & Technologies</h2>
+      <p><strong>Languages:</strong> Python, HTML, CSS, SQL</p>
+      <p><strong>Tools:</strong> GitHub, Jenkins, Docker, Kubernetes, Terraform, Postman, Linux, GCP, AWS</p>
+    </section>
 
-  <div class="section">
-    <h2>Leadership / Extracurricular</h2>
-    <ul>
-      <li><strong>Google Developer Group On-Campus:</strong> Cloud & DevOps Lead – Facilitated GCP Study Jams, trained 600+ learners</li>
-      <li><strong>Data Science Club:</strong> Led workshops and technical sessions from 2022 to 2024</li>
-    </ul>
+    <section>
+      <h2>Certifications</h2>
+      <ul>
+        <li>GCP DevOps Project – KodeKloud (Feb 2025)</li>
+        <li>Docker Training – KodeKloud (Sep 2024)</li>
+        <li>GitHub Foundation Certified (Jul 2024)</li>
+        <li>AI Fundamentals – Microsoft (Jun 2024)</li>
+        <li>Postman Student Expert (Dec 2023)</li>
+        <li>Python for Data Science – IIT Madras (Aug 2023)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Leadership / Extracurricular</h2>
+      <ul>
+        <li><strong>Google Developer Group On-Campus</strong> (Cloud & DevOps Lead)</li>
+        <li><strong>Data Science Club</strong> – Organizer & Event Leader</li>
+      </ul>
+    </section>
   </div>
 </body>
 </html>
