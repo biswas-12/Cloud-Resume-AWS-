@@ -1,235 +1,59 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-*{
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-::selection{
-  color: #000;
-  background:#FFD700;
-}
-body{
-  background:#000;
-  display: flex; /* Enable flex layout for body */
-  min-height: 100vh; /* Ensure body takes full viewport height */
-  align-items: center; /* Vertically center content (optional, adjust as needed) */
-  justify-content: center; /* Initially center content */
-}
-.select-box, .play-board, .result-box{
-  transition: all 0.3s ease;
-}
-.select-box{
-  background: #fff;
-  padding: 20px 25px 25px;
-  border-radius: 5px;
-  max-width: 400px;
-  width: 100%;
-  margin-right: 30px; /* Add some space between the input and the board */
-}
-.select-box.hide{
-  opacity: 0;
-  pointer-events: none;
-}
-.select-box header{
-  font-size: 30px;
-  font-weight: 600;
-  padding-bottom: 10px;
-  border-bottom: 1px solid lightgrey;
-}
-.select-box .title{
-  font-size: 22px;
-  font-weight: 500;
-  margin: 20px 0;
-}
-.select-box .input-name{
-    margin-bottom: 15px;
-}
-.select-box .input-name label{
-    display: block;
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-.select-box .input-name input{
-    width: 100%;
-    padding: 10px;
-    border: 1px solid lightgrey;
-    border-radius: 5px;
-    font-size: 16px;
-    outline: none;
-}
-.select-box .options{
-  display: flex;
-  width: 100%;
-}
-.options button{
-  width: 100%;
-  font-size: 20px;
-  font-weight: 500;
-  padding: 10px 0;
-  border: none;
-  border-radius: 5px;
-  color: #000;
-  outline: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.options button:hover,
-.btn button:hover{
-  transform: scale(0.96);
-}
-.options button.playerX{
-  margin-right: 5px;
-  background: #007bff; /* Blue for Player X */
-  color: #fff;
-}
-.options button.playerO{
-  margin-left: 5px;
-  background: #dc3545; /* Red for Player O */
-  color: #fff;
-}
-.play-board{
-  opacity: 0;
-  pointer-events: none;
-  transform: scale(0.9);
-}
-.play-board.show{
-  opacity: 1;
-  pointer-events: auto;
-  transform: scale(1);
-}
-.play-board .details{
-  padding: 7px;
-  border-radius: 5px;
-  background: #fff;
-}
-.play-board .players{
-  width: 100%;
-  display: flex;
-  position: relative;
-  justify-content: space-between;
-}
-.players span{
-  position: relative;
-  z-index: 2;
-  color: #FFD700;
-  font-size: 20px;
-  font-weight: 500;
-  padding: 10px 0;
-  width: 100%;
-  text-align: center;
-  cursor: default;
-  user-select: none;
-  transition: all 0.3 ease;
-}
-.players.active span:first-child{
-  color: #fff;
-}
-.players.active span:last-child{
-  color: #FFD700;
-}
-.players span:first-child{
-  color: #fff;
-}
-.players .slider{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  background: #FFD700;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-}
-.players.active .slider{
-  left: 50%;
-}
-.players.active span:first-child{
-  color: #FFD700;
-}
-.players.active span:nth-child(2){
-  color: #fff;
-}
-.players.active .slider{
-  left: 50%;
-}
-.play-area{
-  margin-top: 20px;
-}
-.play-area section{
-  display: flex;
-  margin-bottom: 1px;
-}
-.play-area section span{
-  display: block;
-  height: 90px;
-  width: 90px;
-  margin: 2px;
-  color: #FFD700;
-  font-size: 40px;
-  line-height: 80px;
-  text-align: center;
-  border-radius: 5px;
-  background: #fff;
 }
 
-.result-box{
-  padding: 25px 20px;
-  border-radius: 5px;
-  max-width: 400px;
-  width: 100%;
+.resume {
+  max-width: 900px;
+  background: white;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
   text-align: center;
-  background: #fff;
-  transform: scale(0.9);
-  position: absolute; /* Keep result box centered initially */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.9);
-  opacity: 0;
-  pointer-events: none;
+  margin-bottom: 2rem;
 }
-.result-box.show{
-  opacity: 1;
-  pointer-events: auto;
-  transform: translate(-50%, -50%) scale(1);
+
+header h1 {
+  margin-bottom: 0.3rem;
+  font-size: 2rem;
+  color: #333;
 }
-.result-box .won-text{
-  font-size: 30px;
-  font-weight: 500;
-  display: flex;
-  justify-content: center;
+
+header p {
+  margin: 0.2rem 0;
 }
-.result-box .won-text p{
-  font-weight: 600;
-  margin: 0 5px;
+
+a {
+  color: #0073e6;
+  text-decoration: none;
 }
-.result-box .btn{
-  width: 100%;
-  margin-top: 25px;
-  display: flex;
-  justify-content: center;
+
+a:hover {
+  text-decoration: underline;
 }
-.btn button{
-  font-size: 18px;
-  font-weight: 500;
-  padding: 8px 20px;
-  border: none;
-  background: #FFD700;
-  border-radius: 5px;
-  color: #000;
-  outline: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
+
+section {
+  margin-bottom: 1.5rem;
 }
-@media (max-width:768px)
-{
-.body{
-  background:#000;
-  flex-direction: column; /* Stack items vertically on smaller screens */
-  align-items: center; /* Center items horizontally */
+
+section h2 {
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.3rem;
+  margin-bottom: 0.8rem;
+  color: #444;
 }
-.select-box{
-    margin-right: 0;
-    margin-bottom: 20px;
+
+ul {
+  padding-left: 1.2rem;
 }
+
+.project {
+  margin-bottom: 1rem;
 }
