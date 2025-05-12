@@ -1,59 +1,87 @@
+@page {
+    size: A4;
+    margin: 1cm;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 0;
+    font-family: Arial, sans-serif;
+    color: #000;
+    background-color: #ffffff;
 }
 
 .resume {
-  max-width: 900px;
-  background: white;
-  margin: 2rem auto;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 21cm;
+    padding: 20px;
+    margin: auto;
+    border: 1px solid #92d7ff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-header {
-  text-align: center;
-  margin-bottom: 2rem;
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
 }
 
-header h1 {
-  margin-bottom: 0.3rem;
-  font-size: 2rem;
-  color: #333;
+.contact {
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
 }
 
-header p {
-  margin: 0.2rem 0;
+.contact a {
+    color: #000;
+    text-decoration: none;
+    margin: 0 5px;
 }
 
-a {
-  color: #0073e6;
-  text-decoration: none;
+.section {
+    margin-bottom: 20px;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
-section {
-  margin-bottom: 1.5rem;
-}
-
-section h2 {
-  border-bottom: 2px solid #ccc;
-  padding-bottom: 0.3rem;
-  margin-bottom: 0.8rem;
-  color: #444;
+h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
 }
 
 ul {
-  padding-left: 1.2rem;
+    list-style-type: disc;
+    padding-left: 20px;
 }
 
-.project {
-  margin-bottom: 1rem;
+.project h3, .section h3 {
+    font-size: 16px;
+    color: #0073e6;
+    margin: 5px 0;
+}
+
+.project h3 a, .section h3 a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+.project ul, .section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
